@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Uma carta digital romântica, feita por Vitor para Lupyta."
+    />
+    <title>Uma carta para Lupyta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="loading-screen" id="loadingScreen" aria-live="polite">
+      <div class="loading-orb" aria-hidden="true"></div>
+      <p>Preparando sua cartinha...</p>
+    </div>
+
+    <canvas class="ambient-canvas" id="ambientCanvas" aria-hidden="true"></canvas>
+    <div class="aurora-bg" id="auroraBg" aria-hidden="true"></div>
+
+    <main class="site-shell" id="top">
+      <section class="hero section-reveal" id="opening" aria-labelledby="openingTitle">
+        <p class="eyebrow">um presente digital privado</p>
+        <h1 id="openingTitle">Tem uma cartinha te esperando</h1>
+        <p class="hero-copy">
+          Fiz esse cantinho com carinho para guardar um pouco da saudade que eu sinto de você.
+        </p>
+
+        <div class="envelope-stage" id="envelopeStage">
+          <div class="envelope" aria-hidden="true">
+            <div class="envelope-paper">
+              <span>Para Lupyta</span>
+              <small>com saudade</small>
+            </div>
+            <div class="envelope-back"></div>
+            <div class="envelope-letter-glow"></div>
+            <div class="envelope-front"></div>
+            <div class="envelope-flap"></div>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" id="openLetterBtn" type="button">
+          <span>Abrir minha carta</span>
+        </button>
+      </section>
+
+      <section class="letter-section section-reveal" id="letter" aria-labelledby="letterTitle">
+        <article class="letter-card">
+          <div class="letter-card__shine" aria-hidden="true"></div>
+          <p class="eyebrow">de coração aberto</p>
+          <h2 id="letterTitle">Uma carta para <span data-person-name>Lupyta</span></h2>
+          <p class="letter-subtitle">De <span data-author-name>Vitor</span>, com saudade</p>
+
+          <p class="typing-line" id="typingLine" aria-live="polite"></p>
+
+          <div class="letter-content">
+            <p>
+              Meu amor, eu sinceramente tô morrendo de saudades de você. Eu fiz isso com o intuito de
+              demonstrar mais um pouquinho o quanto eu te amo e quero ficar com você.
+            </p>
+            <p>
+              Você tem razão em ter medo. Eu sei que às vezes sou irresponsável quando boto algo na
+              cabeça; minha mãe sempre dizia que eu só faço o que eu quero. Mas vim te dizer que,
+              agora, <strong>o que eu quero é ter você em meus braços</strong>, te amar e construir um
+              futuro incrível pra você e para os nossos filhos.
+            </p>
+            <p>
+              Eu te amo mais que tudo, meu amor, e nada pode impedir a gente de ficar juntos. Saiba que
+              você é realmente, sempre foi e será <strong>o amor da minha vida</strong>.
+            </p>
+            <p>
+              Essa distância me mata, e eu simplesmente não consigo mais viver longe de você. Sinto
+              muito mesmo por tudo que aconteceu da última vez, mas dessa vez vai ser completamente
+              diferente.
+            </p>
+            <p class="letter-highlight">
+              Eu te amo, minha vida. Eu te amo mesmo, <span data-person-name>Lupyta</span>.
+            </p>
+          </div>
+        </article>
+
+        <div class="final-glow-message section-reveal">
+          você é meu lugar favorito
+        </div>
+      </section>
+
+      <section class="moments section-reveal" id="moments" aria-labelledby="momentsTitle">
+        <p class="eyebrow">memórias em foto</p>
+        <h2 id="momentsTitle">Nossos momentos</h2>
+        <p class="section-copy">
+          Troque as imagens da pasta <code>fotos</code> pelas suas favoritas e elas aparecem aqui.
+        </p>
+        <div class="photo-grid" id="photoGrid">
+          <figure class="photo-card reveal-left" data-depth="0.08">
+            <img src="fotos/foto1.jpg" alt="Momento especial 1" loading="lazy" />
+            <figcaption>um instante nosso</figcaption>
+          </figure>
+          <figure class="photo-card reveal-right" data-depth="0.12">
+            <img src="fotos/foto2.jpg" alt="Momento especial 2" loading="lazy" />
+            <figcaption>saudade boa</figcaption>
+          </figure>
+          <figure class="photo-card reveal-zoom" data-depth="0.06">
+            <img src="fotos/foto3.jpg" alt="Momento especial 3" loading="lazy" />
+            <figcaption>carinho guardado</figcaption>
+          </figure>
+          <figure class="photo-card reveal-left" data-depth="0.1">
+            <img src="fotos/foto4.jpg" alt="Momento especial 4" loading="lazy" />
+            <figcaption>nosso jeitinho</figcaption>
+          </figure>
+          <figure class="photo-card reveal-right" data-depth="0.07">
+            <img src="fotos/foto5.jpg" alt="Momento especial 5" loading="lazy" />
+            <figcaption>pra lembrar sempre</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="timeline section-reveal" id="timeline" aria-labelledby="timelineTitle">
+        <p class="eyebrow">coisas que ficam</p>
+        <h2 id="timelineTitle">Algumas coisas que eu nunca esqueço</h2>
+        <div class="timeline-track" id="timelineTrack" aria-label="Linha do tempo de lembranças"></div>
+      </section>
+
+      <section class="counter section-reveal" id="counter" aria-labelledby="counterTitle">
+        <p class="eyebrow">tempo que vira saudade</p>
+        <h2 id="counterTitle">Tempo pensando em você</h2>
+        <div class="counter-grid" id="counterGrid" aria-live="polite">
+          <div class="time-box"><strong data-unit="days">00</strong><span>dias</span></div>
+          <div class="time-box"><strong data-unit="hours">00</strong><span>horas</span></div>
+          <div class="time-box"><strong data-unit="minutes">00</strong><span>minutos</span></div>
+          <div class="time-box"><strong data-unit="seconds">00</strong><span>segundos</span></div>
+        </div>
+      </section>
+
+      <section class="share section-reveal" id="share" aria-labelledby="shareTitle">
+        <p class="eyebrow">guardar e compartilhar</p>
+        <h2 id="shareTitle">Compartilhar cartinha</h2>
+        <p class="section-copy">Use o QR Code ou copie o link para abrir essa carta em outro lugar.</p>
+        <div class="qr-card">
+          <div id="qrcode" class="qr-code" aria-label="QR Code do link atual"></div>
+          <div class="share-actions">
+            <button class="btn btn-secondary" id="copyLinkBtn" type="button">Copiar link</button>
+            <button class="btn btn-secondary" id="downloadQrBtn" type="button">Baixar QR Code</button>
+          </div>
+          <p class="copy-feedback" id="copyFeedback" role="status"></p>
+        </div>
+      </section>
+
+      <button class="btn btn-primary back-to-top" id="backToTop" type="button">
+        Voltar ao começo
+      </button>
+    </main>
+
+    <footer class="footer">
+      <span>Feito por <span data-author-name>Vitor</span> para <span data-person-name>Lupyta</span></span>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
